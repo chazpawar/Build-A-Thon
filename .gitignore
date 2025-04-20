@@ -1,0 +1,7 @@
+*node_modules
+*package-lock.json
+*bun.lock
+*.env.local
+*.next
+*.vercel
+*dist
