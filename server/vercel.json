@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "server.js"
+      }
+    ],
+    "env": {
+      "NODE_ENV": "production",
+      "SERVER_URL": "https://lecturelite-api.vercel.app",
+      "CLIENT_URL": "https://lecturelite.vercel.app",
+      "GOOGLE_CALLBACK_URL": "https://lecturelite-api.vercel.app/auth/google/callback"
+    }
+  }

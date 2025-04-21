@@ -1,0 +1,4 @@
+{
+  "/page": "app/page.js",
+  "/oauth-callback/page": "app/oauth-callback/page.js"
+}
