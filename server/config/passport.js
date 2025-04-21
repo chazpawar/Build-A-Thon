@@ -20,10 +20,19 @@ passport.deserializeUser(async (id, done) => {
 const config = {
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  callbackURL: 'https://lecturelite-api.vercel.app/auth/google/callback', // Hardcoded production URL to ensure consistency
+  callbackURL: process.env.NODE_ENV === 'production' 
+    ? 'https://lecturelite-api.vercel.app/auth/google/callback'
+    : 'http://localhost:8000/auth/google/callback',
   scope: ["profile", "email"],
   timeout: 25000,  // Set timeout to 25 seconds
   passReqToCallback: true // Add this to pass request to callback
+};
+
+// Update client callback URL port
+const getClientCallbackUrl = () => {
+  return process.env.NODE_ENV === 'production'
+    ? 'https://lecturelite.vercel.app/oauth-callback'
+    : 'http://localhost:3000/oauth-callback';  // Frontend port 3000
 };
 
 console.log('Using Google OAuth callback URL:', config.callbackURL);
@@ -35,6 +44,8 @@ passport.use(new GoogleStrategy(config, async (req, accessToken, refreshToken, p
     }
     
     const user = await handleGoogleAuth(profile);
+    // Add client callback URL to user object
+    user.clientCallbackUrl = getClientCallbackUrl();
     return done(null, user);
   } catch (error) {
     console.error('Google strategy error:', error);

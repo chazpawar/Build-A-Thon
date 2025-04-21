@@ -5,13 +5,19 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   const handleGoogleLogin = () => {
     // Use environment variable for API URL
-    const authUrl = process.env.NEXT_PUBLIC_AUTH_URL || 'https://lecturelite-api.vercel.app/auth';
+    const authUrl = process.env.NODE_ENV === 'development' 
+      ? 'http://localhost:8000/auth'
+      : 'https://lecturelite-api.vercel.app/auth';
     window.location.href = `${authUrl}/google`;
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="flex flex-col gap-4 items-center justify-center p-8 border rounded-lg shadow-md">
+      <div className="flex flex-col gap-4 items-center justify-center p-8 border rounded-lg shadow-md bg-indigo-700 text-white">
+        {/* Enhanced rounded logo with gradient and shadow */}
+        <div className="w-24 h-24 flex items-center justify-center bg-gradient-to-br from-white to-blue-100 rounded-xl shadow-lg mb-2 border-2 border-white/50">
+          <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-indigo-800 to-indigo-600">LL</span>
+        </div>
         <h1 className="text-2xl font-bold">LectureLite OAuth</h1>
         <p className="text-sm text-gray-500">Environment: {process.env.NODE_ENV}</p>
         <Button onClick={handleGoogleLogin} className="flex gap-2 items-center">

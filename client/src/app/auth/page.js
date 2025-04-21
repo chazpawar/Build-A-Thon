@@ -17,7 +17,10 @@ function AuthContent() {
   }, [searchParams]);
 
   const handleGoogleLogin = () => {
-    window.location.href = `${process.env.NEXT_PUBLIC_AUTH_URL || "http://localhost:8000/auth"}/google`;
+    const authUrl = process.env.NODE_ENV === 'development'
+      ? 'http://localhost:8000/auth'
+      : 'https://lecturelite-api.vercel.app/auth';
+    window.location.href = `${authUrl}/google`;
   };
 
   return (
