@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="600" viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Glow -->
+  <circle cx="450" cy="300" r="240" fill="url(#paint0_radial)" opacity="0.5"/>
+  
+  <!-- Main Document -->
+  <rect x="250" y="150" width="400" height="300" rx="16" fill="white" stroke="#E0E7FF" stroke-width="2"/>
+  
+  <!-- Document Lines -->
+  <rect x="280" y="190" width="240" height="8" rx="4" fill="#E0E7FF"/>
+  <rect x="280" y="220" width="340" height="8" rx="4" fill="#E0E7FF"/>
+  <rect x="280" y="250" width="300" height="8" rx="4" fill="#E0E7FF"/>
+  <rect x="280" y="280" width="320" height="8" rx="4" fill="#E0E7FF"/>
+  <rect x="280" y="310" width="280" height="8" rx="4" fill="#E0E7FF"/>
+  <rect x="280" y="340" width="340" height="8" rx="4" fill="#E0E7FF"/>
+  <rect x="280" y="370" width="200" height="8" rx="4" fill="#E0E7FF"/>
+  <rect x="280" y="400" width="160" height="8" rx="4" fill="#E0E7FF"/>
+  
+  <!-- AI Summary Document -->
+  <rect x="400" y="100" width="300" height="200" rx="16" fill="#4F46E5" stroke="#4338CA" stroke-width="2"/>
+  <rect x="430" y="140" width="180" height="8" rx="4" fill="white" opacity="0.9"/>
+  <rect x="430" y="170" width="240" height="8" rx="4" fill="white" opacity="0.9"/>
+  <rect x="430" y="200" width="200" height="8" rx="4" fill="white" opacity="0.9"/>
+  <rect x="430" y="230" width="220" height="8" rx="4" fill="white" opacity="0.9"/>
+  <rect x="430" y="260" width="120" height="8" rx="4" fill="white" opacity="0.9"/>
+
+  <!-- Analysis Highlights -->
+  <circle cx="610" cy="190" r="40" fill="#F9FAFB" fill-opacity="0.2"/>
+  <path d="M610 170V210M590 190H630" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  
+  <circle cx="320" cy="340" r="40" fill="#EEF2FF" fill-opacity="0.6"/>
+  <path d="M330 330L310 350M310 330L330 350" stroke="#4F46E5" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Brain/AI Icon -->
+  <circle cx="450" cy="320" r="50" fill="#F5F3FF" stroke="#4F46E5" stroke-width="2"/>
+  <path d="M435 300C435 300 442 290 450 290C458 290 465 300 465 300" stroke="#4F46E5" stroke-width="3" stroke-linecap="round"/>
+  <path d="M427 315C427 315 438 340 450 340C462 340 473 315 473 315" stroke="#4F46E5" stroke-width="3" stroke-linecap="round"/>
+  <path d="M450 290V340" stroke="#4F46E5" stroke-width="3" stroke-linecap="round"/>
+  <path d="M430 305H470" stroke="#4F46E5" stroke-width="3" stroke-linecap="round"/>
+  <path d="M435 325H465" stroke="#4F46E5" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Connection Lines -->
+  <path d="M400 200C375 225 375 275 400 300" stroke="#818CF8" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M500 200C525 225 525 275 500 300" stroke="#818CF8" stroke-width="2" stroke-dasharray="4 4"/>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(450 300) rotate(90) scale(240)">
+      <stop stop-color="#C7D2FE"/>
+      <stop offset="1" stop-color="#EEF2FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg> 
